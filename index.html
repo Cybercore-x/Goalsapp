@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+<link rel="stylesheet" href="styles.css">
+  <title>React/Practice</title>
+</head>
+<body>
+
+   <div id="root"></div>
+  <script type="text/babel">
+    const { useState } = React;
+
+function Formulario() {
+  const [nombre, setNombre] = useState('');
+const [email, setEmail] = useState('');
+const [messege, setMessege] = useState('');
+
+const alerta = () => {
+  if(nombre && email && messege) {
+  window.alert('your messege has been sent.!');
+  setNombre('');
+  setEmail('');
+  setMessege('');
+  } else {
+    window.alert('Please fill out all required fields.');
+  }
+};
+
+
+return (
+
+    <div className='formulario'>
+
+      <form action="URL"></form>
+      <h2>Formulario</h2>
+
+      <label htmlFor="name">Nombre:</label>
+      <input id='name' type="name" placeholder='Your name' value={nombre}
+       onChange={(e) => setNombre(e.target.value)} required/>
+
+      <label htmlFor="email">Email:</label>
+      <input type="email" name="email" id="email" placeholder='example@email.com'
+       onChange={(e) => setEmail(e.target.value)} value={email} required/>
+
+      <label htmlFor="messege">Messege:</label>
+      <textarea name="text" id="messege" placeholder='Your messege' value={messege}
+       onChange={(e) => setMessege(e.target.value)} required></textarea>
+
+      <button type='button' onClick={alerta}>Enviar</button>
+      
+      </div>
+    );
+}
+
+function App () {
+  return (
+    <Formulario />
+  )
+}
+
+
+ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+
+
+</body>
+</html>
