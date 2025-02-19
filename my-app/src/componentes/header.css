@@ -1,0 +1,39 @@
+.main-header {
+    @apply flex justify-between shadow bg-white relative;
+}
+
+.title {
+    @apply flex items-center pl-4;
+}
+
+.profile {
+    @apply flex items-center px-4 hover:bg-gray-200;
+}
+.logo {
+    @apply mr-2 h-14 w-10;
+}
+
+.app {
+    @apply text-lg font-semibold uppercase;
+}
+.icon {
+    @apply h-14 w-6;
+}
+.nm-flat-red-500-lg {
+    background: #F56565;
+    box-shadow: 0.4em 0.4em calc(0.4em * 2) #F01414, calc(0.4em * -1) calc(0.4em * -1) calc(0.4em * 2) #F9A6A6;
+  }
+  .nm-flat-red-500 {
+    background: #F56565;
+    box-shadow: 0.2em 0.2em calc(0.2em * 2) #F01414, calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #F9A6A6;
+  }
+   
+  .nm-concave-red-500 {
+    background: linear-gradient(145deg, #F23434, #F78585);
+    box-shadow: 0.2em 0.2em calc(0.2em * 2) #F01414, calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #F9A6A6;
+  }
+   
+  .nm-convex-red-500 {
+    background: linear-gradient(145deg, #F78585, #F23434);
+    box-shadow: 0.2em 0.2em calc(0.2em * 2) #F01414, calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #F9A6A6;
+  }

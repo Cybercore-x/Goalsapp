@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+.tarjeta {
+  @apply rounded-xl m-4 text-gray-700 mx-4 nm-flat-white;
+}
+.boton {
+  @apply text-sm font-bold py-1 px-4 rounded-full;
+}
+.boton--gris {
+  @apply text-white nm-flat-gray-700 hover:to-black;
+}
+.background {
+  background-color: lightgray;
+}

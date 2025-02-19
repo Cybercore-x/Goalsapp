@@ -1,16 +1,21 @@
 import { ReactComponent as Logo } from '../assets/images/logo.svg';
+import { ReactComponent as Profile} from '../assets/images/perfil.svg';
+import './header.css';
+
 
 function Header() {
     return (
-        <div>
-            <div>
-                <Logo style={{ width: '100px', fill: 'orange'}} className="logo" />
-                <a href="/">My-App</a>
+        <header className='main-header'>
+            <div className='title'>
+                <Logo className='logo' style={{ width: '100px', fill: 'orange'}}/>
+                <a className="app" href="/">My-App</a>
             </div>
-            <nav className="flex">
-                <a href="/profile">Profile</a>
+            <nav className="profile">
+                <a href="/profile">
+                <Profile className="icon" style={{ width: '100px', fill: 'white'}}/>
+                </a>
             </nav>
-        </div>
+        </header>
     );
 }
 
